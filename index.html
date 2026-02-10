@@ -9,22 +9,33 @@
 </head>
 
 <body>
-
     <div class="container">
         <div class="card">
             <h1>Humanizador de Produto</h1>
-            <input type="file" id="file" />
-            <input type="number" id="num" value="2" min="1" max="6" />
-            <button id="btn">Humanizar</button>
+            <!-- Preview vem primeiro -->
             <div class="preview" id="preview"></div>
+            <!-- <input type="file" id="file" /> -->
+            <div class="upload-wrapper">
+                <label for="file" class="upload-btn">
+                    Selecionar imagem
+                </label>
+                <input type="file" id="file" accept=".png, .jpg, .jpeg" hidden />
+                <span id="filename">Nenhum arquivo selecionado</span>
+            </div>
+            <button id="btn">
+                Humanizar
+                <span class="spinner" id="spinner"></span>
+            </button>
+            <!-- Nome do arquivo -->
+            <!-- <div id="filename"></div> -->
+            <input type="number" id="num" value="2" min="1" max="6" />
             <div class="loader" id="loader">Gerando imagens...</div>
             <div class="results" id="results"></div>
-
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 
 </html>
+
 
