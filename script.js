@@ -51,8 +51,10 @@ const file_upload = document.getElementById("file_upload");
         };
 
         function togglePrompt() {
-            promptConfig.style.display = checkbox.checked ? "none" : "grid";
-        }
+    setTimeout(() => {
+        promptConfig.style.display = checkbox.checked ? "none" : "grid";
+    }, 0);
+}
 
         async function buscar_imagem_shopee() {
             const link = document.getElementById("link_shopee").value.trim();
